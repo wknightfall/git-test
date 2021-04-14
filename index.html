@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>git学习</title>
+</head>
+<body>
+	<div>git init (初始化git)</div>
+	<div>git config (配置git user.name  user.email)</div>
+	<div>git status (查看工作区，暂存区状态)</div>
+	<div>git add file_name (把工作区的代码提交到暂存区)</div>
+	<div>git commit -m "remark"(把暂存区的代码提交到本地库)</div>
+	<hr/>
+	<div>git log (完整日志 空格向下翻页，b向上翻页，q退出)</div>
+	<div>git log --pretty--oneline(单行显示日志信息 简洁)</div>
+	<div>git log --oneline (缩短哈希值显示，更简洁)</div>
+	<div>git reflog (显示到某个版本需要移动几步)</div>
+	<hr/>
+	<div>git reset --hard 哈希值 (跳转到当前哈希值的版本)（配合 git reflog）(删除文件后找回)</div>
+	<div>git reset --hard HEAD^ (只能后退版本，几个“^”退几步) （配合 git log --oneline）</div>
+	<div>git reset --hard HEAD~number (只能后退版本，number是多少就退多少步)（配合 git log --oneline）</div>
+	<div> --soft (移动本地库HEAD指针) --mixed (移动本地库 HEAD指针,重置暂存区) --hard (移动本地库HEAD指针，充值暂存区，重置工作区)</div>
+	<div>git reset --hard [指向某个记录] 删除文件并找回 （前提：删除前，文件存在是的状态必须提交到本地库）</div>
+	<hr>	
+	<div>git giff filename (将工作区中的文件和缓存区进行比较)（不带文件名比较多个文件）</div>
+	<div>git giff HEAD filename (将工作区的文件跟历史版本进行比较)</div>
+	<hr>
+	<div>分支 （同时并行推进多个功能，提高开发效率）（各个分支在开发过程中，如果某一个失败，不会影响其他分支，失败的分支删除重新开始即可）</div>
+	<div>git branch [分支名] （创建分支）</div>
+	<div>git branch -v (查看分支)</div>
+	<div>git checkout [分支名] 切换分支</div>
+	<div>合并分支（1.切换到接受修改的分支上 git checkout [被合并分支名]）（2 merge合并 git merge [合并分支名]）</div>
+	<div>分支冲突 （1 编辑文件删除特殊符号）（2 把文件修改到满意的程度）（3 git add [文件名]）（4. git commit -m "remark"）</div>
+	<hr>
+	<div>克隆 git clone [远程地址]（1 把远程的克隆到本地,2 创建 origin 远程地址别名 3 初始化本地库）</div>
+</body>
+</html>
