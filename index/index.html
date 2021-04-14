@@ -15,9 +15,15 @@
 	<div>git log --oneline (缩短哈希值显示，更简洁)</div>
 	<div>git reflog (显示到某个版本需要移动几步)</div>
 	<hr/>
-	<div>git reset --hard 哈希值 (跳转到当前哈希值的版本)（配合 git reflog）</div>
+	<div>git reset --hard 哈希值 (跳转到当前哈希值的版本)（配合 git reflog）(删除文件后找回)</div>
 	<div>git reset --hard HEAD^ (只能后退版本，几个“^”退几步) （配合 git log --oneline）</div>
 	<div>git reset --hard HEAD~number (只能后退版本，number是多少就退多少步)（配合 git log --oneline）</div>
 	<div> --soft (移动本地库HEAD指针) --mixed (移动本地库 HEAD指针,重置暂存区) --hard (移动本地库HEAD指针，充值暂存区，重置工作区)</div>
+	<div>git reset --hard [指向某个记录] 删除文件并找回 （前提：删除前，文件存在是的状态必须提交到本地库）</div>
+	<hr>	
+	<div>git giff filename (将工作区中的文件和缓存区进行比较)（不带文件名比较多个文件）</div>
+	<div>git giff HEAD filename (将工作区的文件跟历史版本进行比较)</div>
+	<hr>
+	
 </body>
 </html>
